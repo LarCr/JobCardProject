@@ -319,9 +319,11 @@
     <Content Include="Views\JobCards\Details.cshtml" />
     <Content Include="Views\JobCards\Edit.cshtml" />
     <Content Include="Views\JobCards\Index.cshtml" />
+    <Content Include="Views\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -51,11 +51,19 @@ namespace JobCardProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "JobId,CustId,EngId,JobDetails,SiteContact,PartsUsed,Date,TimeOnSite")] JobCard jobCard)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.JobCards.Add(jobCard);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.JobCards.Add(jobCard);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception ex)
+            {
+                //This is set to return the error page if there is an error while creating a new record. 
+                return View("Error");
             }
 
             ViewBag.CustId = new SelectList(db.Customers, "CustId", "CustomerName", jobCard.CustId);
