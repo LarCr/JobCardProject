@@ -15,7 +15,7 @@ namespace JobCardProject.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Job Card Creator - PGDinCyber Security - Contact X15031195@student.ncirl.ie .";
 
             return View();
         }

@@ -17,7 +17,13 @@ namespace JobCardProject.Models
             return userIdentity;
         }
     }
+    //Role Code based on tutorial at https://www.youtube.com/watch?v=IngL0-alQYk
+    public class ApplicationRole : IdentityRole
+    {
+        public ApplicationRole() : base() { }
+        public ApplicationRole(string roleName) : base(roleName) { }
 
+    }
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
