@@ -60,7 +60,7 @@ namespace JobCardProject.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 //This is set to return the error page if there is an error while creating a new record. 
                 return View("Error");
